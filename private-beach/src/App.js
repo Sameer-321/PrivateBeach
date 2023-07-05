@@ -1,9 +1,10 @@
 import React from "react";
+import Hero from "./components/Hero.jsx";
 
 const App = () => {
   return (
-    <div className="h-screen w-screen text-center text-4xl my-auto mx-auto font-bold">
-      App
+    <div>
+      <Hero />
     </div>
   );
 };

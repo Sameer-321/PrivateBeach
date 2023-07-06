@@ -5,6 +5,7 @@ import Offers from "./components/Offers.jsx";
 import Plan from "./components/Plan.jsx";
 import Rooms from "./components/Rooms.jsx";
 import ImageSlider from "./components/ImageSlider.jsx";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Plan />
       <Rooms />
       <ImageSlider />
+      <Footer />
     </div>
   );
 };

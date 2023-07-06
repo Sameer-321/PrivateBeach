@@ -1,9 +1,22 @@
 import React from "react";
+import Hero from "./components/Hero.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Offers from "./components/Offers.jsx";
+import Plan from "./components/Plan.jsx";
+import Rooms from "./components/Rooms.jsx";
+import ImageSlider from "./components/ImageSlider.jsx";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   return (
-    <div className="h-screen w-screen text-center text-4xl my-auto mx-auto font-bold">
-      App
+    <div>
+      <Navbar />
+      <Hero />
+      <Offers />
+      <Plan />
+      <Rooms />
+      <ImageSlider />
+      <Footer />
     </div>
   );
 };

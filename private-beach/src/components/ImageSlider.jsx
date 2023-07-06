@@ -1,8 +1,20 @@
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
-
+import { RxDotFilled } from "react-icons/rx";
 const ImageSlider = () => {
   const slides = [
+    {
+      url: "https://media.istockphoto.com/id/1458771092/photo/group-of-friends-having-fun-on-the-beach-during-sunset-having-fun-and-jumping-young-people.webp?b=1&s=170667a&w=0&k=20&c=Oe_f4sZ6uFo1syLjhvESXkE0cnxObegJ4jF8YXyHcmI=",
+      title: "beach",
+    },
+    {
+      url: "https://media.istockphoto.com/id/1492642430/photo/portrait-of-senior-friends-at-a-luxury-hotel-outdoors.webp?b=1&s=170667a&w=0&k=20&c=2Uzw2yE6z5ynMZfSFJAnonKUQFCdbdrLDxmdA2Y-rDM=",
+      title: "friends",
+    },
+    {
+      url: "https://media.istockphoto.com/id/1345310675/photo/3d-rendering-of-modern-house-in-luxurious-style-by-the-sea-or-ocean.webp?b=1&s=170667a&w=0&k=20&c=ip4m9C8unN1wSyv0gwFFEODIwdBwAultAUnIQV7Sg-A=",
+      title: "beach",
+    },
     {
       url: "https://media.istockphoto.com/id/1458771092/photo/group-of-friends-having-fun-on-the-beach-during-sunset-having-fun-and-jumping-young-people.webp?b=1&s=170667a&w=0&k=20&c=Oe_f4sZ6uFo1syLjhvESXkE0cnxObegJ4jF8YXyHcmI=",
       title: "beach",
@@ -53,6 +65,19 @@ const ImageSlider = () => {
                    text-2xl rounded-full p-2 group-hover:bg-black/20 text-white cursor-pointer  "
       >
         <BsChevronCompactRight onClick={nextSlide} size={30} />
+      </div>
+
+      {/* slector */}
+      <div className="flex top-4 justify-center py-2">
+        {slides.map((slide, slideIndex) => (
+          <div
+            key={slideIndex}
+            onClick={() => goToSlide(slideIndex)}
+            className="text-2xl cursor-pointer "
+          >
+            <RxDotFilled />
+          </div>
+        ))}
       </div>
     </div>
   );
